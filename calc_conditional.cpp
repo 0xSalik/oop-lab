@@ -9,23 +9,11 @@ int main()
     std::cin >> op;
     std::cout << "Enter second number ";
     std::cin >> b;
-    switch (op)
-    {
-    case '+':
-        res = a + b;
-        break;
-    case '-':
-        res = a - b;
-        break;
-    case '*':
-        res = a * b;
-        break;
-    case '/':
-        res = (float)a / b;
-        break;
-    default:
-        std::cout << "Invalid Operation";
-        return 0;
-    }
+    op == '+' ? res = a + b : op == '-' ? res = a - b
+                          : op == '*'   ? res = a *b
+                          : op == '/'   ? res = (float)a / b
+                          : op == '%'   ? res = (int)a % (int)b
+                                        : res = -1;
+
     std::cout << "The result of " << a << op << b << " is " << res << std::endl;
 }
