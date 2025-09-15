@@ -2,12 +2,20 @@
 using namespace std;
 int main()
 {
-    for (int i = 0; i < 20; i++)
+    int n;
+    cout << "Enter Size: ";
+    cin >> n;
+    for (int i = 0; i < n; i++)
     {
         for (int j = 0; j < i; j++)
         {
-            cout << "X";
+            if (i & 1)
+                cout << "X";
         }
-        cout << "\n";
+        if (i & 1)
+        {
+            cout << "\n";
+            n++;
+        }
     }
 }
